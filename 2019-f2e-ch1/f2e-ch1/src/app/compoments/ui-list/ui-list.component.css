@@ -1,0 +1,31 @@
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-weight: bold;
+  color: var(--color-black);
+  overflow: auto;
+}
+
+li {
+  height: 50px;
+  padding: 0 8px;
+  user-select: none;
+}
+
+.selected {
+  background-color: var(--color-blue);
+  color: white;
+}
+
+.selected > .color-orange {
+  color: white;
+}
+
+.selected > .tomato {
+  filter: brightness(0) invert(1);
+}
+
+.dark-tomato {
+  filter: brightness(0.5);
+}

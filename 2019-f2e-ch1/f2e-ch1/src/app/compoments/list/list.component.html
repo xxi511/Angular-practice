@@ -1,0 +1,22 @@
+<div class="container" fxLayout="column">
+  <div class="header-title" fxFlex="100px" fxLayoutAlign="start center">
+    All <mat-icon>keyboard_arrow_right</mat-icon> My works
+  </div>
+  <div fxLayout="column" fxFlex="33%">
+    <p class="collection-title">Ongoing</p>
+    <app-ui-list
+      type="ongoing"
+      selectable="true"
+      [items]="ongoings"
+      (selectedItem)="selectedItem.emit($event)"
+    ></app-ui-list>
+  </div>
+  <div fxLayout="column" fxFlex="33%">
+    <p class="collection-title">To do</p>
+    <app-ui-list type="todo" [items]="todos"></app-ui-list>
+  </div>
+  <div fxLayout="column" fxFlex="33%">
+    <p class="collection-title blue">Done</p>
+    <app-ui-list type="done" [items]="dones"></app-ui-list>
+  </div>
+</div>

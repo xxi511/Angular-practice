@@ -1,0 +1,10 @@
+.container {
+  width: 100%;
+  height: calc(100vh - 570px);
+  padding: 40px 25px;
+  background-color: var(--color-pink-light);
+}
+
+.event-title {
+  font-size: 25px;
+}

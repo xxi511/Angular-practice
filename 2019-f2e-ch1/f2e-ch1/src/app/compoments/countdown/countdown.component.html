@@ -1,0 +1,82 @@
+<div class="container" fxLayout="column">
+  <div class="container-title text-bold" fxFlex="60px">My Works</div>
+  <div class="work-title-div" fxFlex="100px" fxLayout="row">
+    <span fxFlex="100%" class="work-title text-bold">{{ item.title }}</span>
+    <div fxFlex="150px" fxLayout="column">
+      <span class="time text-align-right" fxFlex="50%">{{ timeString }}</span>
+      <span class="color-orange text-bold text-align-right" fxFlex="50%"
+        >10 minutes left!</span
+      >
+    </div>
+  </div>
+  <div class="circle-div " fxFlex="250px" fxLayoutAlign="center center">
+    <div class="circle-wrap cursor-pointer" (click)="toggleTimer()">
+      <div class="circle">
+        <div class="mask full" #maskfull>
+          <div class="fill" #fullfill></div>
+        </div>
+
+        <div class="mask half">
+          <div class="fill" #halffill></div>
+        </div>
+
+        <div class="inside-circle" fxLayout="row" fxLayoutAlign="center center">
+          <img
+            class="select-none"
+            src="assets/icons/ic-pause.png"
+            *ngIf="interval"
+          />
+          <img
+            class="select-none"
+            src="assets/icons/ic-play.png"
+            *ngIf="interval === null"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="goal-div"
+    fxLayout="row"
+    fxFlex="100%"
+    fxLayoutAlign="center center"
+    fxLayoutGap="40px"
+  >
+    <div class="goal-block" fxFlex="105px" fxLayout="column">
+      <span
+        class="text-align-center color-orange text-bold line-height-47"
+        fxFlex="50%"
+        >Goal</span
+      >
+      <span
+        class="text-align-center line-height-47 color-black text-bold"
+        fxFlex="50%"
+        >{{ item.total }}</span
+      >
+    </div>
+    <div class="goal-block" fxFlex="105px" fxLayout="column">
+      <span
+        class="text-align-center color-orange text-bold line-height-47"
+        fxFlex="50%"
+        >Used</span
+      >
+      <span
+        class="text-align-center line-height-47 color-black text-bold"
+        fxFlex="50%"
+        >{{ item.finish }}</span
+      >
+    </div>
+    <div class="goal-block" fxFlex="105px" fxLayout="column">
+      <span
+        class="text-align-center color-orange text-bold line-height-47"
+        fxFlex="50%"
+        >Paused</span
+      >
+      <span
+        class="text-align-center line-height-47 color-black text-bold"
+        fxFlex="50%"
+        >15 mins</span
+      >
+    </div>
+  </div>
+</div>

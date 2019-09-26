@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+:root {
+  --color-orange: #f8aa95;
+  --color-pink: #fdeeed;
+  --color-pink-light: #fef6f6;
+  --color-pink-deep: #fabaae;
+  --color-blue: #a0dae4;
+  --color-black: #484848;
+  --color-gray: #989898;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.color-orange {
+  color: var(--color-orange);
+}
+
+.color-blue {
+  color: var(--color-blue);
+}
+
+.color-black {
+  color: var(--color-black);
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.select-none {
+  user-select: none;
+}

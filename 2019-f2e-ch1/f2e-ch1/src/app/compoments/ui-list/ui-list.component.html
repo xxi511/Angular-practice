@@ -1,0 +1,31 @@
+<ul>
+  <li
+    fxLayout="row"
+    fxLayoutAlign="start center"
+    fxLayoutGap="10px"
+    *ngFor="let item of items; let idx = index"
+    [ngClass]="{
+      selected: item.selected,
+      'cursor-pointer': type === 'ongoing' && selectable
+    }"
+    (click)="selectItem(idx)"
+  >
+    <mat-icon *ngIf="type !== 'done'">list</mat-icon>
+    <span fxFlex="100%">{{ item.title }}</span>
+    <span
+      fxFlex="80px"
+      class="text-align-right"
+      [ngClass]="{
+        'color-orange': item.finish !== item.total,
+        'color-blue': item.finish === item.total,
+        'color-black': item.finish === 0
+      }"
+      >{{ getGoalText(item) }}</span
+    >
+    <img
+      class="tomato"
+      [ngClass]="{ 'dark-tomato': type === 'done' }"
+      src="assets/icons/tomato-s.png"
+    />
+  </li>
+</ul>
