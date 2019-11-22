@@ -1,0 +1,66 @@
+@import "../../../color.scss";
+
+$arrow_width: 3px;
+$arrow_length: 20px;
+
+span {
+  color: $black;
+}
+
+.round {
+  $size: 50px;
+  display: inline-block;
+  text-align: center;
+  width: $size;
+  height: $size;
+  line-height: $size;
+  border-radius: $size / 2;
+  color: white;
+  background-color: $deep_gray;
+}
+
+.bg-blue,
+.bg-blue.arrow {
+  background-color: $deep_blue;
+  &:after {
+    background-color: $deep_blue;
+  }
+  &:before {
+    background-color: $deep_blue;
+  }
+}
+
+.icon {
+  width: 80px;
+  height: 52px;
+}
+
+.arrow {
+  position: relative;
+  top: 25px;
+  width: 90%;
+  height: $arrow_width;
+  background-color: $black;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: $arrow_length;
+    height: $arrow_width;
+    top: -7px;
+    right: -2px;
+    background-color: $black;
+    transform: rotate(45deg);
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: $arrow_length;
+    height: $arrow_width;
+    top: 7px;
+    right: -2px;
+    background-color: $black;
+    transform: rotate(-45deg);
+  }
+}

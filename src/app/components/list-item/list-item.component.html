@@ -1,0 +1,12 @@
+<div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px">
+  <span
+    class="pointer round"
+    [ngClass]="{ 'bg-blue': isSelected }"
+    (click)="clickNum()"
+    >{{ num }}</span
+  >
+  <span>{{ title }}</span>
+  <div class="icon" *ngIf="hasNextArrow">
+    <div class="arrow" [ngClass]="{ 'bg-blue': isSelected }"></div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<nav>
+  <span>F2E</span>
+
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <pay-list-item
+      [num]="1"
+      [title]="'第一步'"
+      [hasNextArrow]="true"
+      [isSelected]="true"
+      (clickEnt)="itemClickEnt($event)"
+    ></pay-list-item>
+
+    <pay-list-item
+      [num]="2"
+      [title]="'第二步'"
+      [hasNextArrow]="true"
+      [isSelected]="false"
+      (clickEnt)="itemClickEnt($event)"
+    ></pay-list-item>
+
+    <pay-list-item
+      [num]="3"
+      [title]="'完成'"
+      [hasNextArrow]="false"
+      [isSelected]="false"
+      (clickEnt)="itemClickEnt($event)"
+    ></pay-list-item>
+  </div>
+</nav>
